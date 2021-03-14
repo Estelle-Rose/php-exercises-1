@@ -34,7 +34,6 @@ function moyenne($notes) {
                     $value = 'Femme';
                 }
                 echo "$index : $value <br/>";
-
             }
            else{
                 moyenne($value);
