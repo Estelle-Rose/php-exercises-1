@@ -48,7 +48,7 @@ echo "</pre>"; */
                             <td class="align-middle"><?= $animal->getType() ?></td>
                             <td class="align-middle"><?php foreach ($animal->getImage() as $image) :?>
                             <div class="d-flex m-2">
-                                <?php echo '<img src="./sources/'.$image['url'].'" alt="./sources/'.$image['libelle'].'" width="200px" max-height="180px">' ;?>
+                                <img src="./sources/<?=$image['url']?>" alt="./sources/<?=$image['libelle']?>" style="max-height:150px" class="img-thumbnail img-fluid">
                             </div>
                             <?php endforeach;?>
                             </td>
