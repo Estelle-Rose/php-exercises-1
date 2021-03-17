@@ -6,3 +6,6 @@ Quelques exercices php
 Cas pratique n°2 -> créer une base de données  
 DB_NAME = catalogue_produits / USER_NAME = "root" /PWD = "root"  
 et importer le fichier sql fourni dans le dossier 2-catalogue 😊
+Cas pratique n°3 -> créer une base de données  animaux
+DB_NAME = catalogue_produits / USER_NAME = "root" /PWD = "root"  
+et importer le fichier sql fourni dans le dossier 3-Animals 🦝
