@@ -6,7 +6,7 @@ if(!isset($_SESSION['hache'])) $_SESSION['hache']= 1;
 if(!isset($_SESSION['fléau'])) $_SESSION['fléau']= 1;
 
 ob_start(); //NE PAS MODIFIER 
-$titre = "Partie 8 : Finalisation avec les essions"; //Mettre le nom du titre de la page que vous voulez
+$titre = "Partie 8 : Finalisation avec les sessions"; //Mettre le nom du titre de la page que vous voulez
 ?>
 
 <!-- mettre ici le code -->
@@ -51,17 +51,17 @@ class Arme {
                 $display .="</div>";
                 $display .="<div class='col-md-2'>";
                     $display .= '<form action="" method="GET">';
-                        $display .= '<div class="form-group">';
-                            $display .= '<label for="level">Level</label>';
-                            $display .= '<select onChange="submit()" class="form-control" id="level" name="level'.$this->nom.'">';
-                            for($i=1; $i<=$this->maxLevel;$i++) {
-                                $display .= '<option value='.$i.' ';
-                                $display .= ($i===(int)$_SESSION[$this->nom]) ? "selected ": "";
-                                $display .= ' >'.$i.'</option>';
-                            }
-                                                    
-                            $display .= '</select>';
-                           
+                    $display .= '<div class="form-group">';
+                    $display .= '<label for="level">Level</label>';
+                    $display .= '<select onChange="submit()" class="form-control" id="level" name="level'.$this->nom.'">';
+                    for($i=1; $i<=$this->maxLevel;$i++) {
+                        $display .= '<option value='.$i.' ';
+                        $display .= ($i===(int)$_SESSION[$this->nom]) ? "selected ": "";
+                        $display .= ' >'.$i.'</option>';
+                    }
+                    
+                    $display .= '</select>';
+                  
                         $display .= '</div>';
                       $display .="</form>";
                 $display .="</div>";
@@ -82,27 +82,19 @@ class Arme {
 
 $arme1 = new Arme( 'épée',5,
 'Une arme tranchante');
-
-
 $arme2 = new Arme('arc',2,
 'Une arme à distance');
-
-
 $arme3 = new Arme('hache',5,
 'Une arme tranchante ou un outil qui permet aussi de couper du bois'
 );
-
-
 $arme4 = new Arme('fléau',5,
 'Une arme contondante du moyen âge'
 );
-
-
 $armes = [$arme1, $arme2, $arme3, $arme4];
 foreach ($armes as $arme) {
     $nomarme = $arme->getNom();    
     if(isset($_GET["level$nomarme"])) {
-        $_SESSION["$nomarme"]= $_GET["level$nomarme"] ;    
+        $_SESSION["$nomarme"] = $_GET["level$nomarme"] ;    
     }
     $arme->setLevel($_SESSION["$nomarme"]);
 }

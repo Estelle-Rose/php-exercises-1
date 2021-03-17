@@ -25,13 +25,13 @@ class Produit {
     public function setDescription($description) {return $this->description = $description;}
     
      public function __tostring() {
-        $display =  "<div class='card m-2 p-3' >";
+        $display =  "<div class='card my-4 mx-2 p-3' >";
           
                     $display .="<img src='./sources/$this->image' alt=' $this->nom '>";
                     $display .=" <div class='card-body'>";
                         $display .='<h5 class="card-title">'. $this->nom .'</h5>';
-                        $display .='<p class="card-text">'.$this->description.'</p>';
-                        $display .='<button type="button" class="btn btn-primary">'.$this->tag.'</button>';
+                        $display .='<p class="card-text caption">'.$this->description.'</p>';
+                        $display .='<span class="badge badge-primary">'.$this->tag.'</span>';
                     $display .="</div>";
                
           

@@ -28,7 +28,7 @@
        
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Armes
+            Gestion Armes
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="../../3-cas-pratiques/1-Armes/exo1.php">exo1</a>
@@ -40,6 +40,16 @@
                 <a class="dropdown-item" href="../../3-cas-pratiques/1-Armes/exo7.php">exo7</a>
                 <a class="dropdown-item" href="../../3-cas-pratiques/1-Armes/exo8.php">exo8</a>
             </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link " href="../../3-cas-pratiques/2-catalogue/index.php" >
+            Catalogue Produits
+            </a>           
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link " href="../../3-cas-pratiques/3-Animals/index.php" >
+            Liste animaux
+            </a>           
         </li>
     </ul>
     </div>
